@@ -13,69 +13,59 @@ class Rectangle:
 
     """
 
-    def __init__(self, width=0, height=0):
-        """
-        Initialize a new Rectangle instance.
+    __width = 0
+    __height = 0
 
-        Args:
-            width (int): The width of the rectangle, defaults to 0
-            height (int): The height of the rectangle, defaults to 0
-        """
-        self.width = width  # 使用 setter 进行验证
-        self.height = height  # 使用 setter 进行验证
+    def __init__(self, width=0, height=0):
+        self.height = height
+        self.width = width
 
     @property
     def width(self):
-        """
-        Get the width of the rectangle.
+        """Getter for private prop width
 
-        Returns:
-            int: The current width of the rectangle
+            Returns:
+                value of __width
         """
         return self.__width
 
     @width.setter
     def width(self, value):
-        """
-        Set the width of the rectangle with validation.
+        """Sets value of width.
 
-        Args:
-            value (int): The new width value
-
-        Raises:
-            TypeError: If value is not an integer
-            ValueError: If value is less than 0
+            Returns:
+                Nothing
         """
-        if not isinstance(value, int):
+
+        if isinstance(value, int) is not True:
             raise TypeError("width must be an integer")
+
         if value < 0:
             raise ValueError("width must be >= 0")
+
         self.__width = value
 
     @property
     def height(self):
-        """
-        Get the height of the rectangle.
+        """Getter for private prop height
 
-        Returns:
-            int: The current height of the rectangle
+            Returns:
+                value of __height
         """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """
-        Set the height of the rectangle with validation.
+        """Sets value of height.
 
-        Args:
-            value (int): The new height value
-
-        Raises:
-            TypeError: If value is not an integer
-            ValueError: If value is less than 0
+            Returns:
+                Nothing
         """
-        if not isinstance(value, int):
+
+        if isinstance(value, int) is not True:
             raise TypeError("height must be an integer")
+
         if value < 0:
             raise ValueError("height must be >= 0")
+
         self.__height = value
