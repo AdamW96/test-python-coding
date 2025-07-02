@@ -1,17 +1,16 @@
 #!/usr/bin/python3
-"""
-This module defines a Rectangle class.
-
-The Rectangle class represents a rectangle with validated width and height attributes.
-"""
+""" Nameless module for Rectangle class """
 
 
 class Rectangle:
-    """
-    A class that defines a rectangle.
+    """A rectangle.
 
-    This class represents a rectangle with private width and height attributes
-    that are validated using property decorators.
+    Args:
+        None
+
+    Returns:
+        Nothing
+
     """
 
     def __init__(self, width=0, height=0):
